@@ -1,0 +1,137 @@
+{% extends 'mainhome.html' %}
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Page Title -->
+    <title>Contact Us</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'images/logo/favicon.png'%}" type="image/x-icon">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="{% static 'css/animate-3.7.0.css'%}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome-4.7.0.min.css'%}">
+    <link rel="stylesheet" href="{% static 'fonts/flat-icon/flaticon.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-4.1.3.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/owl-carousel.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+<body>
+{% block content %}
+    <!-- Preloader Starts -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+
+
+    <!-- Header Area Starts -->
+    <header class="header-area single-page">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="custom-navbar">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-title text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <h2>YOU CAN ADD EMPLOYEES HERE</h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <br><br>
+    <section class="contact-form section-padding3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    <div class="d-flex">
+                        <div class="into-icon">
+<!--                            <i class="fa fa-home"></i>-->
+                        </div>
+                        <div class="info-text">
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="into-icon">
+<!--                            <i class="fa fa-phone"></i>-->
+                        </div>
+                        <div class="info-text">
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="into-icon">
+<!--                            <i class="fa fa-envelope-o"></i>-->
+                        </div>
+                        <div class="info-text">
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <form action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="left">
+                            <label for="n">Employee Name:</label><br>
+                           <input type="text" id="n"   name="name" placeholder=""  required>
+                            <label for="i">Image:</label><br>
+                            <input type="file"  id="i" name="image" placeholder=""  required>
+                            <label for="p">Phone Number:</label><br>
+
+                            <input type="text"  id="p" name="phone" placeholder=""  required>
+                            <label for="a">Address:</label><br>
+                            <input type="text" id="a"  name="address" placeholder=""  required>
+                        </div>
+
+
+
+                        <button type="submit" class="template-btn">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+
+
+
+    <!-- Javascript -->
+    <script src="{% static 'js/vendor/jquery-2.2.4.min.js'%}"></script>
+	<script src="{% static 'js/vendor/bootstrap-4.1.3.min.js'%}"></script>
+    <script src="{% static 'js/vendor/wow.min.js'%}"></script>
+    <script src="{% static 'js/vendor/owl-carousel.min.js'%}"></script>
+    <script src="{% static 'js/vendor/jquery.nice-select.min.js'%}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I"></script>
+    <script src="{% static 'js/vendor/gmaps.min.js'%}"></script>
+    <script src="{% static 'js/vendor/ion.rangeSlider.js'%}"></script>
+    <script src="{% static 'js/main.js'%}"></script>
+
+</body>
+</html>
